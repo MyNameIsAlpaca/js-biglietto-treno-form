@@ -18,6 +18,8 @@ let userDistance;
 
 let userAge;
 
+let ticketPrice;
+
 button_create.addEventListener("click", function() {
     
     let userName = document.getElementById("userName").value;
@@ -25,11 +27,16 @@ button_create.addEventListener("click", function() {
     let userDistance = document.getElementById("userDistance").value;
     
     let userAge = document.getElementById("userAge").selectedIndex;
-    
-    console.log(userName)
-    console.log(userDistance)
-    console.log(userAge)
 
-    if (userAge.selectedIndex == 1) {
+    ticketPrice = userDistance * 0.21;
+    
+    if (userAge == 1) {
+        ticketPrice = ticketPrice * 80 / 100;
+    } else if (userAge == 2) {
+        ticketPrice = ticketPrice
+    } else if (userAge == 3) {
+        ticketPrice = ticketPrice * 60 / 100;
     }
+
+    ticketPrice = ticketPrice.toFixed(2)
 });
