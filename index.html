@@ -11,23 +11,23 @@
     <div class="info-container">
         <div class="username-container">
             <label for="username">Inserisci il tuo nome</label>
-            <input name="username" type="text">
+            <input name="username" id="userName" type="text">
         </div>
         <div class="distance-container">
             <label for="distance">Inserisci i KM che devi percorrere</label>
-            <input name="distance" type="number">
+            <input name="distance" id="userDistance" type="number">
         </div>
-        <div class="userage-container">
-            <label for="userage">Scegli la tua età:</label>
-            <select name="userage" id="userage">
+        <div class="userAge-container">
+            <label for="userAge">Scegli la tua età:</label>
+            <select name="userAge" id="userAge">
               <option value="">Scegli un'opzione</option>
-              <option id="minors">0-17 anni</option>
-              <option id="adult">18-65 anni</option>
-              <option id="old">65+ anni</option>
+              <option>0-17 anni</option>
+              <option>18-65 anni</option>
+              <option>65+ anni</option>
             </select>
         </div>
         <div class="btn-container">
-            <button>Genera</button>
+            <button id="button-create">Genera</button>
             <button>Annulla</button>
         </div>
     </div>
