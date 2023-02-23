@@ -95,6 +95,8 @@ body .info-container .title{
 .info-container .info-ticket .empty-info table {
     width: 100%;
     padding-top: 20px;
+    border: none;
+    
 }
 
 td, th {
@@ -105,4 +107,22 @@ td, th {
 .info-container .info-ticket .empty-info table th:first-child {
     font-size: 20px;
 }
+
+.info-container .info-ticket .empty-info table th:first-child,
+.info-container .info-ticket .empty-info table td:first-child {
+    background-color: #cde5ff91;
+    padding: 5px;
+}
+
+.info-container .info-ticket .empty-info {
+    display: flex;
+}
+
+.info-container .info-ticket .empty-info img {
+    max-width: 150px;
+}
+
+
+
+
 
