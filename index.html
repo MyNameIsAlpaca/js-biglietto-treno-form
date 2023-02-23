@@ -6,29 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trenitalia</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="info-container">
-        <div class="username-container">
-            <label for="username">Inserisci il tuo nome</label>
-            <input name="username" id="userName" type="text">
+        <div class="title">
+            <h1>Benvenuto da TreniBoolean</h1>
+            <h2>Calcola il prezzo del tuo biglietto!</h2>
         </div>
-        <div class="distance-container">
-            <label for="distance">Inserisci i KM che devi percorrere</label>
-            <input name="distance" id="userDistance" type="number">
+        <div class="info">
+            <div class="full-info">
+                <div class="info-user">
+                    <div class="username-container info-taker">
+                        <label for="username">Inserisci il tuo nome</label>
+                        <input name="username" id="userName" type="text">
+                    </div>
+                    <div class="distance-container info-taker">
+                        <label for="distance label-info">Inserisci i KM che devi percorrere</label>
+                        <input name="distance" id="userDistance" type="number">
+                    </div>
+                    <div class="userAge-container info-taker">
+                        <label for="userAge">Scegli la tua età:</label>
+                        <select name="userAge" id="userAge">
+                          <option value="">Scegli un'opzione</option>
+                          <option>0-17 anni</option>
+                          <option>18-65 anni</option>
+                          <option>65+ anni</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button id="button-create">Genera</button>
+                    <button>Annulla</button>
+                </div>
+            </div>
         </div>
-        <div class="userAge-container">
-            <label for="userAge">Scegli la tua età:</label>
-            <select name="userAge" id="userAge">
-              <option value="">Scegli un'opzione</option>
-              <option>0-17 anni</option>
-              <option>18-65 anni</option>
-              <option>65+ anni</option>
-            </select>
+    </div>
+    <div class="info-container">
+        <div class="title">
+            <h2>Il tuo biglietto:</h2>
         </div>
-        <div class="btn-container">
-            <button id="button-create">Genera</button>
-            <button>Annulla</button>
+        <div class="info">
+            <h3>
+                Dettagli passeggero:
+            </h3>
+            <div class="empty-info">
+                <table>
+                    <tr>
+                        <th>NOME PASSEGGERO</th>
+                        <th>Offerta</th>
+                        <th>Carrozza</th>
+                        <th>Codice CP</th>
+                        <th>Costo biglietto</th>
+                    </tr>
+                    <tr>
+                        <td id="emptyName"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 </select>

@@ -20,6 +20,8 @@ let userAge;
 
 let ticketPrice;
 
+let emptyName;
+
 button_create.addEventListener("click", function() {
     
     let userName = document.getElementById("userName").value;
@@ -39,4 +41,8 @@ button_create.addEventListener("click", function() {
     }
 
     ticketPrice = ticketPrice.toFixed(2)
+
+    emptyName = document.getElementById("emptyName")
+
+    emptyName.innerHTML = userName;
 });
