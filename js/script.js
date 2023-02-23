@@ -12,6 +12,13 @@ il prezzo di 0.21€/km.
 
 let button_create = document.getElementById("button-create")
 
+function ClearFields() {
+
+    document.getElementById("userName").value = "";
+    document.getElementById("userDistance").value = "";
+    document.getElementById("userAge").value = "";
+}
+
 
 button_create.addEventListener("click", function() {
     
@@ -43,6 +50,16 @@ button_create.addEventListener("click", function() {
     } else if (userAge == 3) {
         ticketPrice = ticketPrice * 60 / 100;
         sale = "Sconto vecchi!";
+    } else if (userAge == 0) {
+        alert("Scegli un'età!");
+    }
+
+    if (userDistance == "") {
+        alert("Inserisci i Km che devi percorrere");
+    }
+
+    if (userName == "") {
+        alert("Inserisci il tuo nome");
     }
 
     document.getElementById("emptySale").innerHTML = sale;
@@ -57,6 +74,9 @@ button_create.addEventListener("click", function() {
 
     numberTicket.innerHTML = Math.floor(Math.random() * 100000 + 1);
 
-    display.style.display = "flex"
+    if (userName != "" && userDistance != "" && userAge != 0) {
+        display.style.display = "flex"
+    }
+
 
 });
