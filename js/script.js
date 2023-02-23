@@ -9,18 +9,27 @@ il prezzo di 0.21€/km.
 5 generare biglietto con i dati del passeggero e il prezzo
 */
 
+
 let button_create = document.getElementById("button-create")
 
-let userName = document.getElementById("userName");
+let userName;
 
-let userDistance = document.getElementById("userDistance");
+let userDistance;
 
-let userAge = document.getElementById("userAge");
-
-
+let userAge;
 
 button_create.addEventListener("click", function() {
-console.log(userName.value)
-console.log(userDistance.value)
-alert(userAge.selectedIndex);
+    
+    let userName = document.getElementById("userName").value;
+    
+    let userDistance = document.getElementById("userDistance").value;
+    
+    let userAge = document.getElementById("userAge").selectedIndex;
+    
+    console.log(userName)
+    console.log(userDistance)
+    console.log(userAge)
+
+    if (userAge.selectedIndex == 1) {
+    }
 });
