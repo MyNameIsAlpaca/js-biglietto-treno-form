@@ -8,3 +8,4 @@ il prezzo di 0.21€/km.
    * Se l'età è maggiore di 65 anni applicare uno sconto del 40%
 5 generare biglietto con i dati del passeggero e il prezzo
 */
+
