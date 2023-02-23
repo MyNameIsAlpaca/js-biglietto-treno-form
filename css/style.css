@@ -25,6 +25,7 @@ body .info-container .title{
     gap: 20px;
 }
 
+
 .info-container .title {
     text-align: center;
     color: white;
@@ -38,6 +39,12 @@ body .info-container .title{
     background-color: #ee9b00;
     padding: 5%;
     border-radius: 25px;
+}
+
+.info-container .info-ticket {
+    background-color: #ffd60a;
+    padding: 5%;
+    border-radius: 10px;
 }
 
 .info-container .info .full-info {
@@ -85,7 +92,7 @@ body .info-container .title{
     cursor: pointer;
 }
 
-.info-container .info .empty-info table {
+.info-container .info-ticket .empty-info table {
     width: 100%;
     padding-top: 20px;
 }
@@ -95,7 +102,7 @@ td, th {
     padding: 8px;
   }
 
-.info-container .info .empty-info table th:first-child {
+.info-container .info-ticket .empty-info table th:first-child {
     font-size: 20px;
 }
 

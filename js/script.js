@@ -12,15 +12,6 @@ il prezzo di 0.21€/km.
 
 let button_create = document.getElementById("button-create")
 
-let userName;
-
-let userDistance;
-
-let userAge;
-
-let ticketPrice;
-
-let emptyName;
 
 button_create.addEventListener("click", function() {
     
@@ -29,20 +20,43 @@ button_create.addEventListener("click", function() {
     let userDistance = document.getElementById("userDistance").value;
     
     let userAge = document.getElementById("userAge").selectedIndex;
+    
+    let emptyName = document.getElementById("emptyName");
+    
+    let emptyPrice = document.getElementById("emptyPrice");
+
+    let sale = "Prezzo standard";
+
+    let position = document.getElementById("position");
+
+    let numberTicket = document.getElementById("numberTicket");
+
+    let display = document.getElementById("none")
 
     ticketPrice = userDistance * 0.21;
     
     if (userAge == 1) {
         ticketPrice = ticketPrice * 80 / 100;
+        sale = "Sconto bimbi!";
     } else if (userAge == 2) {
         ticketPrice = ticketPrice
     } else if (userAge == 3) {
         ticketPrice = ticketPrice * 60 / 100;
+        sale = "Sconto vecchi!";
     }
+
+    document.getElementById("emptySale").innerHTML = sale;
 
     ticketPrice = ticketPrice.toFixed(2)
 
-    emptyName = document.getElementById("emptyName")
-
     emptyName.innerHTML = userName;
+
+    emptyPrice.innerHTML = ticketPrice + "€";
+
+    position.innerHTML = Math.floor(Math.random() * 10 + 1);
+
+    numberTicket.innerHTML = Math.floor(Math.random() * 100000 + 1);
+
+    display.style.display = "flex"
+
 });
